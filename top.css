@@ -1,0 +1,340 @@
+/* html{
+    font-size: 16px;
+}  */
+
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+
+#allcontainer{
+    background-image: url('./images/publicdomainq-0017229kqldkp.jpg');
+    /* background-color: rgba(114, 209, 253, 0.5);   */ /*雰囲気のいい色*/
+    background-color: rgba(255, 255, 255, 0.5);   /*白のぼかし*/
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+header{
+    min-height: 60px;
+    width: auto;
+    background-color: rgba(185, 185, 185, 0.3);
+    padding: 15px;
+    margin: 0;
+}
+
+.layout{
+    display: flex;
+}
+
+.flex-center{
+    align-items: center;
+}
+
+.flex-equal-justified{
+    justify-content: space-between;
+}
+
+.flex-vertical{
+    flex-direction: column;
+}
+
+.flex-center-justified{
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    padding: 0.1em;
+}
+
+a:hover{
+    padding: 0.1em;
+    background-color: rgba(185, 185, 185, 0.2);
+    border-radius: 0.1em;
+    color: rgba( 15 , 15, 15, 0.9);
+    
+}
+
+h1{
+    margin: 0;
+    font-size: 2em;
+}
+
+.mainContainer{
+    flex: 1;
+    height: 90vh;
+    width: auto;
+    /* background-color:rgb(152, 165, 170); */
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: rgb(10, 10, 10);
+    
+}
+
+/* .mainpart{
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(211, 211, 211, 0.3);
+} */
+
+h2{
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.p2{
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+input[type="text"]{
+    height: 36px;
+    min-width: 200px;
+    padding: 3px;
+    border: solid 1px #bfbfbf;
+    border-bottom: solid 3px #bfbfbf;
+    border-radius: 5px;
+    color: #bfbfbf;
+    
+}
+
+.btn-contained{
+    height: 40px;
+    min-width: 64px;
+    padding:6px 20px;
+    border: solid 1px #b84c00;
+    border-bottom: solid 3px #b84c00;
+    border-radius: 5px;
+    margin: 1px;
+    margin-top: 3px ;
+    color: white;  
+    background-color: #eb6100;
+    cursor: pointer;
+    
+}
+
+.btn-contained:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-contained:active{
+    margin-top: 3px;
+    color: white;
+    background-color: #f56500;
+    border-bottom: solid 1px #b84c00;
+}
+
+
+@media screen  and (min-width: 321px){
+    
+    h2{
+        font-size: 2.4rem;
+        margin: 0;
+    }
+    
+    .p2{
+        font-weight: bold;
+        font-size: 1em;
+    }
+
+    .btn-contained{
+        height: 40px;
+        min-width: 64px;
+        padding:6px 20px;
+        border: solid 1px #b84c00;
+        border-bottom: solid 3px #b84c00;
+        border-radius: 5px;
+        margin: 1px; 
+        color: white;  
+        background-color: #eb6100;
+        cursor: pointer;
+        
+    }
+    
+    .btn-contained:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .btn-contained:active{
+        margin-top: 3px;
+        color: white;
+        background-color: #f56500;
+        border-bottom: solid 1px #b84c00;
+    }
+}
+
+
+@media screen  and (min-width: 480px){
+    h2{
+        font-size: 2.4rem;
+        margin: 0;
+    }
+    
+    .p2{
+        font-weight: bold;
+    }
+    
+    .btn-contained{
+        height: 40px;
+        min-width: 64px;
+        padding:6px 20px;
+        border: solid 1px #b84c00;
+        border-bottom: solid 3px #b84c00;
+        border-radius: 5px;
+        margin: 1px; 
+        color: white;  
+        background-color: #eb6100;
+        cursor: pointer;
+        
+    }
+    
+    .btn-contained:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .btn-contained:active{
+        margin-top: 3px;
+        color: white;
+        background-color: #f56500;
+        border-bottom: solid 1px #b84c00;
+    }
+}
+
+
+@media screen  and (min-width: 760px){
+    h2{
+        font-size: 2.8rem;
+        margin: 0;
+    }
+    
+    .p2{
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    
+    .btn-contained{
+        height: 40px;
+        min-width: 64px;
+        padding:6px 20px;
+        border: solid 1px #b84c00;
+        border-bottom: solid 3px #b84c00;
+        border-radius: 5px;
+        margin: 1px; 
+        color: white;  
+        background-color: #eb6100;
+        cursor: pointer;
+        
+    }
+    
+    .btn-contained:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .btn-contained:active{
+        margin-top: 3px;
+        color: white;
+        background-color: #f56500;
+        border-bottom: solid 1px #b84c00;
+    }
+    
+}
+
+
+@media screen  and (min-width: 1024px){
+    h2{
+        font-size: 3.4rem;
+        margin: 0;
+    }
+    
+    .p2{
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .btn-contained{
+        height: 40px;
+        min-width: 64px;
+        padding:6px 20px;
+        border: solid 1px #b84c00;
+        border-bottom: solid 3px #b84c00;
+        border-radius: 5px;
+        margin: 1px; 
+        color: white;  
+        background-color: #eb6100;
+        cursor: pointer;
+        
+    }
+    
+    .btn-contained:hover{
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .btn-contained:active{
+        margin-top: 3px;
+        color: white;
+        background-color: #f56500;
+        border-bottom: solid 1px #b84c00;
+    }
+}
+/* 
+footer{ 
+    */
+    
+    /* #headerContainer{
+        margin: 0;   
+        background-color: skyblue;
+    }
+    
+    .layout {
+        height: 80px;
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .flex{
+    display: flex;
+}
+
+.flex-center{
+    align-items: center;
+}
+
+.flex-equal-justified{
+    justify-content: space-between;
+}
+
+h1 {
+   padding:5px 8px;
+   margin:0 10px;
+   border: solid 1px black;
+   background-color: orange;
+}
+
+.mainContainer {
+    margin: 0;
+    background-color: aqua;
+    font-size: 24px;
+    padding: 100px;
+}
+
+ul{
+    
+    list-style: none;
+}
+
+.flex-vertical{
+    flex-direction: column;
+}
+
+.flex-center-justified{
+    justify-content: center;
+}
+
+ */
+

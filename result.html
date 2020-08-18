@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="result.css">
+    <title>本検索アプリ結果</title>
+</head>
+<body>
+    <div id="topContainer">
+        <div id="headerContainer" >
+            <header class="layout flex flex-center flex-equal-justified">                      
+                <a href="top.html" class="headertext">
+                    <h1>アプリ</h1>                   
+                </a>
+                <a href="#" class="headertext">ログイン</a> 
+            </header>
+        </div>
+        <div id="searchWrapper" class="layout flex flex-center flex-vertical flex-center-justified">
+            <div>
+                <form action="result.html" method="GET">                       
+                     <input type="text" name="q" placeholder="タイトル">
+                    <button type="submit" name="q" class="btn-contained flex flex-center flex-center-justified">本を検索</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <div id="resultWrapper" class="layout flex flex-center flex-vertical flex-wrap">
+            <h2 id="query" class="p1"></h2>
+        <div id="lists" class="flex-wrap">
+        </div>
+    </div>
+
+    <script src="top.js"></script>   
+    <script src="result.js"></script> 
+</body>
+</html>

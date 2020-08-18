@@ -1,0 +1,155 @@
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+
+#topContainer{
+    background-image: url('./images/publicdomainq-0017229kqldkp.jpg');
+    /* background-color: rgba(114, 209, 253, 0.5);   */ /*雰囲気のいい色*/
+    background-color: rgba(255, 255, 255, 0.5);   /*白のぼかし*/
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;    
+}
+
+header{
+    min-height: 60px;
+    width: auto;
+    background-color: rgba(185, 185, 185, 0.3);
+    padding: 15px;
+    margin: 0;
+}
+
+.layout{
+    display: flex;
+}
+
+.flex-center{
+    align-items: center;
+}
+
+.flex-equal-justified{
+    justify-content: space-between;
+}
+
+.flex-vertical{
+    flex-direction: column;
+}
+
+.flex-center-justified{
+    justify-content: center;
+}
+
+.headertext{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    padding: 0.1em;
+}
+
+.headertext:hover{
+    padding: 0.1em;
+    background-color: rgba(185, 185, 185, 0.2);
+    border-radius: 0.1em;
+    color: rgba( 15 , 15, 15, 0.9);
+    
+}
+
+h1{
+    margin: 0;
+    font-size: 2em;
+}
+
+/* .mainContainer{
+    flex: 1;
+    height: 20vh;
+    width: auto;
+    /* background-color:rgb(152, 165, 170); 
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: rgb(10, 10, 10);
+    
+} */
+
+#searchWrapper{
+    flex: 1;
+    height: 20vh;
+    width: auto;
+    /* background-color:rgb(152, 165, 170); */
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    color: rgb(10, 10, 10);
+
+}
+
+#detailWrapper{
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(238, 238, 238);
+    box-sizing: border-box;
+}
+
+#bookdetail{
+    height: 50vh;
+    min-width: 600px;
+    background-color: rgb(247, 225, 225);
+    padding: 16px 12px;
+    border-radius: 1em;
+    margin-top: 30px;
+    
+}
+
+input[type="text"]{
+    height: 36px;
+    min-width: 200px;
+    padding: 3px;
+    border: solid 1px #bfbfbf;
+    border-bottom: solid 3px #bfbfbf;
+    border-radius: 5px;
+    color: #bfbfbf;
+    
+}
+
+.btn-contained{
+    height: 40px;
+    min-width: 64px;
+    padding:6px 20px;
+    border: solid 1px #b84c00;
+    border-bottom: solid 3px #b84c00;
+    border-radius: 5px;
+    margin: 1px;
+    margin-top: 3px ;
+    color: white;  
+    background-color: #eb6100;
+    cursor: pointer;
+    
+}
+
+.btn-contained:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-contained:active{
+    margin-top: 3px;
+    color: white;
+    background-color: #f56500;
+    border-bottom: solid 1px #b84c00;
+}
+
+.flex{
+    flex: 1;
+}
+
+.flex-2{
+    flex: 2;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
