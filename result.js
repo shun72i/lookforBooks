@@ -1,5 +1,10 @@
 'use strict'
 
+function detail(){
+    console.log('うれしい');    
+
+}
+/*
 class Book{
 
     constructer(item){
@@ -57,9 +62,11 @@ class Book{
     }
     
 }
+*/
 
+// const book = new Book(item);
 
-const book = new Book(item);
+/*
 
 let bookDetailElement = document.getElementById('bookdetail');
 bookDetailElement.innerHTML = `
@@ -76,3 +83,4 @@ bookDetailElement.innerHTML = `
     </div>
 
 `
+*/

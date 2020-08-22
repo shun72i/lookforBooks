@@ -22,7 +22,7 @@ function getParam(paramName){
 
 // ”○○の検索結果”を出力
 function renderQuery(q){
-    console.log('aaaaa');
+    console.log('a');
     let queryElement = document.getElementById('query');
     queryElement.innerText =`${q}の検索結果`;
 }
@@ -38,7 +38,7 @@ function searchBooksByQuery(q){
         .then(response => response.json())
         .then(json => renderResults(json))
         .catch(err => console.error('error',err));
-        console.log('a');
+        console.log('aa');
         
         // レスポンスが通っているか確認用に使用した
         // .then(response => {
@@ -62,13 +62,13 @@ function searchBooksByQuery(q){
 
 // JSONのデータを受け取り、idのlistsにinnerHTMLでデータを出力させている
 function renderResults(data){
-    console.log('a')
+    console.log('aaa')
     for( let i = 0; i < data.items.length ; i++){
         console.log(data.items[i].id);
         let listsElement =document.getElementById('lists');
         listsElement.innerHTML += `
         <a href="./detail.html
-        " class="booklink">
+        " class="booklink" onClick="detail()">
             <div class="contentsWrapper layout ">
                 <div class="flex flex-center">
                     <img src="${data.items[i].volumeInfo.imageLinks.smallThumbnail}" alt="${data.items[i].volumeInfo.title}の画像" class="bookimg">
