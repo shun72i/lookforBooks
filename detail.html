@@ -26,18 +26,26 @@
         </div>
     </div>
     <div id="detailWrapper" class="layout flex-center flex-center-justified  ">
-        <div id="bookdetail" class="layout ">
-            <div>
-                <img src="" alt="">
+        <div id="bookdetail" class="layout flex-vertical">
+            <div classs="">
+                <img id="thumbnail" src="" alt="">
+            </div>
+            <div class="flex-vertical flex-center-justified">
+                <h3 id="title"></h3>
+                <div><p id="pageCount"></p></div>
+                <div><p id="authors"></p></div>
+                <div><p id="publisher"></p></div>
             </div>
             <div>
-                <h3></h3>
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
 
-            
+                <div>
+                    <bottom id="buyLink" class="btn-contained flex-end-justified">購入ページ</bottom>
+                </div>
+                <div>
+                    <h3 class="detail-description flex-start-justified">詳細</h3>
+                    <div id="description" class="description"></div>
+                </div>
+            </div>
         </div>
     </div>
 

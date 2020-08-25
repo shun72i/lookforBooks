@@ -1,7 +1,10 @@
 'use strict'
 
-renderQuery(q);   // ”○○の検索結果"を表示する関数
-searchBooksByQuery(q); //"検索結果を実際に出力するためにfetchで変換する関数"
+window.addEventListener('load',()=>{
+    
+    renderQuery(q);   // ”○○の検索結果"を表示する関数
+    searchBooksByQuery(q); //"検索結果を実際に出力するためにfetchで変換する関数"
+});
 
 // ”○○の検索結果”を出力
 function renderQuery(q){
@@ -10,33 +13,35 @@ function renderQuery(q){
     queryElement.innerText =`${q}の検索結果`;
 }
 
+function makeUrl(q){
+    return `https://www.googleapis.com/books/v1/volumes?q=${q}`; //URLがあっているか要確認
+}
+
 // fetchでURLからの情報をJSONにしている
 function searchBooksByQuery(q){
     let url = makeUrl(q);
     fetch(url)
-    .then(response => response.json())
+        .then(response => response.json())
         .then(json => renderResults(json))
         .catch(err => console.error('error',err));
         console.log('aa');
     }
         
-    
-    
-    function makeUrl(q){
-        return `https://www.googleapis.com/books/v1/volumes?q=${q}`; //URLがあっているか要確認
-    }
-    
        // JSONのデータを受け取り、idのlistsにinnerHTMLでデータを出力させている
        function renderResults(data){
         console.log('aaa');
+        let listsElement = document.getElementById('lists');
         for( let i = 0; i < data.items.length ; i++){
-        // classBook(data.items[i]);
         // if(!data.items[i].volumeInfo.imageLinks){
         // console.log(data.items[i].volumeInfo.imageLinks);
+
+         //common.jsのclass Bookに引数を送り、HTMLに要素をいれる
+         new Book(data.items[i]).attachInnerHTML(listsElement);
         
-            let listsElement =document.getElementById('lists');
-            listsElement.innerHTML += `
-            <a href="./detail.html" class="booklink" onClick="" >
+            /*/  そのままfor文で回してHTMLに出力 detail.htmlに選択したitems[i]を送る方法が分からなかった
+            listsElement.innerHTML += 
+            `
+            <a href="./detail.html?id=${data.items[i].id}" class="booklink" onclick="_onClickDetail(${data.items[i]})" id="clickDetail" >
                 <div class="contentsWrapper layout ">
                 <div class="flex flex-center">
                         <img src="${data.items[i].volumeInfo.imageLinks.smallThumbnail}" alt="${data.items[i].volumeInfo.title}の画像" class="bookimg">
@@ -48,11 +53,12 @@ function searchBooksByQuery(q){
                 </div>
                 </a>
                     `;
+                   /* */
                 }
             }
     //    }
      
-    
+
     
 
    

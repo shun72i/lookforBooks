@@ -38,8 +38,16 @@ header{
     flex-direction: column;
 }
 
+.flex-start-justified{
+    justify-content: flex-start;
+}
+
 .flex-center-justified{
     justify-content: center;
+}
+
+.flex-end-justified{
+    justify-content: flex-end;
 }
 
 .headertext{
@@ -86,7 +94,7 @@ h1{
 }
 
 #detailWrapper{
-    height: 70vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 20px;
@@ -95,7 +103,7 @@ h1{
 }
 
 #bookdetail{
-    height: 50vh;
+    height: auto;
     min-width: 600px;
     background-color: rgb(247, 225, 225);
     padding: 16px 12px;
@@ -103,6 +111,7 @@ h1{
     margin-top: 30px;
     
 }
+
 
 input[type="text"]{
     height: 36px;
