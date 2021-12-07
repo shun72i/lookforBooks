@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="top.css">
-    <title>本検索アプリ</title>
+    <link rel="stylesheet" href="login.css">
+    <title>本検索アプリログイン</title>
 </head>
 <body>
     <div id=allcontainer>
@@ -19,23 +20,25 @@
         <div id="mainContainer ">
             <div class="mainContainer layout flex flex-center flex-vertical flex-center-justified">
                 <div class="mainpart">
-                    <h2 class="p1">本の検索アプリへ<br>ようこそ</h2>
-                    <div >
-                        <p class="p2">あなたも人生を変える本にきっとに出会える<br>さあ、旅に出ましょう</p>
-                    </div>
                     <div>
-                        <form action="result.html" method="GET" autocomplete="off" onsubmit="_onsubmit(event);">
+                        <form class="box" action="index.htyml" method="post">
+                            <h1>Login</h1>
+                            <input type="text" name="" placeholder="Username">
+                            <input type="password" name="" placeholder="Password">
+                            <input type="submit" name="" value="Login" href="result.html">
+                        </form>
+                        <!-- <form action="result.html" method="GET" autocomplete="off" onsubmit="_onsubmit(event);">
                             <input type="text" name="q" placeholder="タイトル" autocomplete="off">
                                 <button type="submit" name="q" class="btn-contained flex flex-center flex-center-justified">本を検索</button>
-                        </form> 
+                        </form>  -->
                     </div>
                 </div>
             </div>
          </div>
     </div>
-    
-    <script src="common.js"></script>
-    <script src="topjs.js"></script>
 
+    <script src="common.js"></script>   
+    <script src="result.js"></script> 
+    
 </body>
 </html>
