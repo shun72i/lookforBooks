@@ -19,9 +19,12 @@ class Book{
         this.authors = volumeInfo.authors;
         this.publisher = volumeInfo.publisher;
         this.description = volumeInfo.description;
-        this.buyLink = volumeInfo.buyLink;
         this.pageCount = volumeInfo.pageCount;
         this.id = item.id;
+        const saleInfo = item.saleInfo;
+        if(saleInfo){
+            this.buyLink = saleInfo.buyLink;
+        }
     }
     
     getTitle(){
@@ -33,23 +36,27 @@ class Book{
     }
 
     getSmallThumbnail(){
-        return this.smallThumbnail;
+        return this.smallThumbnail ? this.smallThumbnail : this.getThumbnail();
     }
     
     getThumbnail(){
-        return this.Thumbnail;
+        return this.Thumbnail ? this.Thumbnail : '';
     }
     
     getAuthors(){
         return this.authors;
     }
+
+    // getBothThumbnail(){
+    //     return this.smallThumbnail? this.getSmallThumbnail : this.Thumbnail();
+    // }
     
     getPublisher(){
         return this.publisher;
     }
     
     getDescription(){
-        return this.description;
+        return this.description ? this.description: '詳細はありません';
     }
     
     getBuyLink(){
@@ -63,16 +70,20 @@ class Book{
     getId(){
         return this.id;
     }    
-//*  参考にした
+//*  参考にした部分
     getResultLists(){
+        // if(!(this.smallThumbnail || this.Thumbnail)){
+        //     console.warn('画像の処理に問題が起こりました');
+        //     return ;
+        // }
         console.log('k');
         return  `
         <a href="./detail.html?id=${this.getId()}" class="booklink"  >
-            <div class="contentsWrapper layout ">
+            <div class="contentsWrapper layout flex-wrap ">
             <div class="flex flex-center">
                     <img src="${this.getSmallThumbnail()}" alt="${this.getTitle()}の画像" class="bookimg">
                     </div>
-                <div class="layout flex-vertical flex-2">
+                <div class="layout flex-vertical flex-2 ttl-desc">
                     <h3 class="booktitle">${this.getTitle()}</h3>
                     <p id="description" class="flex">${this.getDescription()}</p> 
                 </div>

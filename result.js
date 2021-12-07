@@ -10,7 +10,7 @@ window.addEventListener('load',()=>{
 function renderQuery(q){
     console.log('a');
     let queryElement = document.getElementById('query');
-    queryElement.innerText =`${q}の検索結果`;
+    queryElement.innerText =`${q}`;
 }
 
 function makeUrl(q){
@@ -38,7 +38,7 @@ function searchBooksByQuery(q){
          //common.jsのclass Bookに引数を送り、HTMLに要素をいれる
          new Book(data.items[i]).attachInnerHTML(listsElement);
         
-            /*/  そのままfor文で回してHTMLに出力 detail.htmlに選択したitems[i]を送る方法が分からなかった
+            /*  そのままfor文で回してHTMLに出力 detail.htmlに選択したitems[i]を送る方法が分からなかった
             listsElement.innerHTML += 
             `
             <a href="./detail.html?id=${data.items[i].id}" class="booklink" onclick="_onClickDetail(${data.items[i]})" id="clickDetail" >
@@ -53,38 +53,27 @@ function searchBooksByQuery(q){
                 </div>
                 </a>
                     `;
-                   /* */
+            */
                 }
             }
-    //    }
-     
-
-    
-
-   
-    
 
         
-        // レスポンスが通っているか確認用に使用した searchBooksByQuery(q)の中で使用
-            // .then(response => {
-            //  if(response.ok){
-            //         return response.json();
-            //  }else{
-            //return Promise.reject(new Error('エラー'))
-            //     }
-            // }
-            // )
-                // .then(json => {
-            //     console.log(json);
-                // })
-            // .catch(err => console.log(err));
-            // console.log('a');               
-            // ?id=
-             // ${data.items[i].id}
-
-
-
-
+// レスポンスが通っているか確認用に使用した searchBooksByQuery(q)の中で使用
+ // .then(response => {
+ //  if(response.ok){
+ //         return response.json();
+ //  }else{
+ //return Promise.reject(new Error('エラー'))
+ //     }
+ // }
+ // )
+     // .then(json => {
+ //     console.log(json);
+     // })
+ // .catch(err => console.log(err));
+ // console.log('a');               
+ // ?id=
+ // ${data.items[i].id}
 
 /*
 class Book{

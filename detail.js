@@ -41,7 +41,7 @@ function detailCard(item){
     document.getElementById('pageCount').innerHTML = book.getPageCount();
     document.getElementById('authors').innerHTML = book.getAuthors();
     document.getElementById('publisher').innerHTML = book.getPublisher();
-    document.getElementById('buyLink').innerHTML = book.getBuyLink();
+    const buyBottom = document.getElementById('buyLink').href = book.getBuyLink();
     document.getElementById('description').innerHTML = book.getDescription();
 
 }

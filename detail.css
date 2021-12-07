@@ -64,6 +64,13 @@ header{
     
 }
 
+a{
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    padding: 0.1em;
+}
+
+
 h1{
     margin: 0;
     font-size: 2em;
@@ -162,3 +169,30 @@ input[type="text"]{
     flex-wrap: wrap;
 }
 
+.buy-btn{
+    margin-top: 20px;
+}
+
+.buy-bottom-wrapper{
+    margin: 15px ;
+}
+
+.detail-description{
+    margin-top: 30px;
+}
+
+
+@media screen  and (min-width: 400px){
+    
+}
+
+
+@media screen  and (min-width: 760px){
+#bookdetail-header{
+    flex-direction: row;
+}
+}
+
+
+@media screen  and (min-width: 1024px){
+}

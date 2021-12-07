@@ -11,15 +11,15 @@
         <div id="headerContainer" >
             <header class="layout flex flex-center flex-equal-justified">                      
                 <a href="index.html" class="headertext">
-                    <h1>アプリ</h1>                   
+                    <h1>ホーム</h1>                   
                 </a>
                 <a href="#" class="headertext">ログイン</a> 
             </header>
         </div>
         <div id="searchWrapper" class="layout flex flex-center flex-vertical flex-center-justified">
             <div>
-                <form action="result.html" method="GET">                       
-                     <input type="text" name="q" placeholder="タイトル">
+                <form action="result.html" method="GET" autocomplete="off">                       
+                     <input type="text" name="q" placeholder="タイトル" autocomplete="off">
                     <button type="submit" name="q" class="btn-contained flex flex-center flex-center-justified">本を検索</button>
                 </form> 
             </div>
@@ -27,19 +27,22 @@
     </div>
     <div id="detailWrapper" class="layout flex-center flex-center-justified  ">
         <div id="bookdetail" class="layout flex-vertical">
-            <div classs="">
-                <img id="thumbnail" src="" alt="">
-            </div>
-            <div class="flex-vertical flex-center-justified">
-                <h3 id="title"></h3>
-                <div><p id="pageCount"></p></div>
-                <div><p id="authors"></p></div>
-                <div><p id="publisher"></p></div>
+            <div id="bookdetail-header">
+                <div classs="flex-center-justified">
+                    <img id="thumbnail" src="" alt="">
+                </div>
+                <div class="flex-vertical flex-center-justified ">
+                    <h3 id="title"></h3>
+                    <div>ページ数：<span id="pageCount"></span></div>
+                    <div>著者：<span id="authors"></span></div>
+                    <div>出版：<span id="publisher"></span></div>
+                </div>
             </div>
             <div>
-
-                <div>
-                    <bottom id="buyLink" class="btn-contained flex-end-justified">購入ページ</bottom>
+                <div class="flex-end-justified buy-bottom-wrapper">
+                    <a href="" id="buyLink">
+                        <bottom class="btn-contained buy-btn ">購入ページ</bottom>
+                    </a>
                 </div>
                 <div>
                     <h3 class="detail-description flex-start-justified">詳細</h3>

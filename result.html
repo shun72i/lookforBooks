@@ -11,22 +11,22 @@
         <div id="headerContainer" >
             <header class="layout flex flex-center flex-equal-justified">                      
                 <a href="index.html" class="headertext">
-                    <h1>アプリ</h1>                   
+                    <h1>ホーム</h1>                   
                 </a>
                 <a href="#" class="headertext">ログイン</a> 
             </header>
         </div>
         <div id="searchWrapper" class="layout flex flex-center flex-vertical flex-center-justified">
             <div>
-                <form action="result.html" method="GET">                       
-                     <input type="text" name="q" placeholder="タイトル">
+                <form action="result.html" method="GET" autocomplete="off">                       
+                     <input type="text" name="q" placeholder="タイトル" autocomplete="off">
                     <button type="submit" name="q" class="btn-contained flex flex-center flex-center-justified">本を検索</button>
                 </form> 
             </div>
         </div>
     </div>
     <div id="resultWrapper" class="layout flex flex-center flex-vertical flex-wrap">
-            <h2 id="query" class="p1"></h2>
+            <h2><span id="query" class="p1"></span>の検索結果</h2>
         <div id="lists" class="flex-wrap">
         </div>
     </div>
